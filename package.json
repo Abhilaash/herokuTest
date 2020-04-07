@@ -32,7 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "engines": {
-    "node": ">10.10"
+    "engines": {
+    "node": "^10.10"
   }
 }
