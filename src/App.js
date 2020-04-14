@@ -2,16 +2,21 @@ import React from 'react';
 import './App.css';
 import Fetcher from './Fetcher';
 import Hooks from './Hooks';
+import Skeleton from '@material-ui/lab/Skeleton';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    width: 300,
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    {item ? (
-      <img style={{ width: 210, height: 118 }} alt={item.title} src={item.src} />
-    ) : (
-      <Skeleton variant="rect" width={210} height={118} />
-    )}
     <div className="App">
-      <Hooks/>
+     <Skeleton animation="wave" />
+     <Hooks/>
     </div>
   );
 }
